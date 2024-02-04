@@ -1,23 +1,25 @@
-//Ceren Eren 150121054 
-//This class creates items with the given id's and counts how many items have been created since the beginning of the program
 
-class Item {
-	private int id;
-	public static int numberOfItems;
+public abstract class Item {
+	//declare variables
+	private double vat;
+	private double basePrice;
 	
-	//Create an item with the given id and increment numberOfItems
-	public Item(int id) {
-		this.id=id;
-		numberOfItems++;
+	public abstract double calculatePrice();
+	
+	//getter setter methods
+	public double getVat() {
+		return vat;
+	}
+	public void setVat(double vat) {
+		this.vat = vat;
+	}
+	public double getBasePrice() {
+		return basePrice;
+	}
+	public void setBasePrice(double basePrice) {
+		this.basePrice = basePrice;
 	}
 	
-	//Implement getter-setter methods for the variable id
-	public int getId() {
-		return id;
-	}
 	
-	public void setId(int newId) {
-		id=newId;
-	}
 
 }
